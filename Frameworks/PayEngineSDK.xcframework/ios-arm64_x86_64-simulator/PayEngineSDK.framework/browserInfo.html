@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, viewport-fit=cover">
+    </head>
+    <body>
+        <button>click me</button>
+        <hr/>
+        <div id="log"></div>
+        <script>
+            const Base64 = {
+                /**
+                 * base64 dictionary: +/
+                 * base64url: -_
+                 * for 3DS the encoded string must not be padded with =
+                 */
+                characters: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_",
+                
+                encode: function (string) {
+                    let result = '';
+                    
+                    let i = 0;
+                    do {
+                        let a = string.charCodeAt(i++);
+                        let b = string.charCodeAt(i++);
+                        let c = string.charCodeAt(i++);
+                        
+                        a = a ? a : 0;
+                        b = b ? b : 0;
+                        c = c ? c : 0;
+                        
+                        let b1 = (a >> 2) & 0x3F;
+                        let b2 = ((a & 0x3) << 4) | ((b >> 4) & 0xF);
+                        let b3 = ((b & 0xF) << 2) | ((c >> 6) & 0x3);
+                        let b4 = c & 0x3F;
+                        
+                        if (!b) {
+                            b3 = b4 = 64;
+                        } else if (!c) {
+                            b4 = 64;
+                        }
+                        
+                        result += Base64.characters.charAt(b1) + Base64.characters.charAt(b2) + Base64.characters.charAt(b3) + Base64.characters.charAt(b4);
+                        
+                    } while (i < string.length);
+                    
+                    return result;
+                },
+                
+                decode: function (string) {
+                    let result = '';
+                    
+                    let i = 0;
+                    do {
+                        let b1 = Base64.characters.indexOf(string.charAt(i++));
+                        let b2 = Base64.characters.indexOf(string.charAt(i++));
+                        let b3 = Base64.characters.indexOf(string.charAt(i++));
+                        let b4 = Base64.characters.indexOf(string.charAt(i++));
+                        
+                        let a = ((b1 & 0x3F) << 2) | ((b2 >> 4) & 0x3);
+                        let b = ((b2 & 0xF) << 4) | ((b3 >> 2) & 0xF);
+                        let c = ((b3 & 0x3) << 6) | (b4 & 0x3F);
+                        
+                        result += String.fromCharCode(a) + (b ? String.fromCharCode(b) : '') + (c ? String.fromCharCode(c) : '');
+                        
+                    } while (i < string.length);
+                    
+                    return result;
+                }
+            };
+            
+            function objectToBase64url(data) {
+                const base64String = Base64.encode(JSON.stringify(data))
+                // return url safe
+                return base64String
+            }
+            
+            function base64urlToObject(base64String) {
+                const jsonString = Base64.decode(base64String)
+                return JSON.parse(jsonString)
+            }
+            var PayEngine = {
+                collectBrowserInfo: async() => {
+                    const result = await fetch("https://console.payengine.co/api/clientbrowserinfo");
+                    const response = await result.json();
+                    
+                    //Note: Chrome returns 30 on Macbook which 3DS doesn't support
+                    // If it's 30 making it 32 so it doesn't fail
+                    let colorDepth = window.screen.colorDepth
+                    if (colorDepth === 30)
+                    colorDepth = 32
+                    
+                    const browserInfo = {
+                        a: navigator.javaEnabled(),
+                        b: navigator.language || navigator.userLanguage,
+                        c: colorDepth.toString(),
+                        d: window.screen.availHeight.toString(),
+                        e: window.screen.availWidth.toString(),
+                        f: new Date().getTimezoneOffset().toString(),
+                        g: response.ip, //browserIP:
+                        h: response.userAgent, // browserUserAgent:
+                        i: response.acceptHeader,  //browserAcceptHeader:
+                    }
+                    
+                    var base64 = objectToBase64url(browserInfo)
+                    
+                    return base64
+                }
+            }
+            
+            PayEngine.collectBrowserInfo().then(function(base64) {
+                webkit.messageHandlers.peMessageHandler.postMessage(base64)
+            }).catch(function(err) {
+                webkit.messageHandlers.peMessageHandler.postMessage("Error occurs" + err.message)
+            })
+            
+            <!--  const log = (msg) => {-->
+                <!--      console.log(msg)-->
+                <!--    const p = document.createElement('p')-->
+                <!--    p.textContent = msg-->
+                <!--    document.querySelector('#log').append(p)-->
+                <!--  }-->
+            <!--  // to receive messages from native-->
+            <!--  webkit.messageHandlers.peMessageHandler.onMessage = (msg) => {-->
+                <!--    log('from native:' + msg)-->
+                <!--    webkit.messageHandlers.peMessageHandler.postMessage("Hello I got you")-->
+                <!--  }-->
+            <!---->
+            <!--  document.querySelector('button').addEventListener('click', () => {-->
+                <!--    log(typeof webkit.messageHandlers.bridge.postMessage)-->
+                <!--    // send messages to native-->
+                <!--    webkit.messageHandlers.peMessageHandler.postMessage('{"msg": "hello?","id": ' + Date.now() + '}')-->
+                <!--  })-->
+        </script>
+    </body>
+</html>

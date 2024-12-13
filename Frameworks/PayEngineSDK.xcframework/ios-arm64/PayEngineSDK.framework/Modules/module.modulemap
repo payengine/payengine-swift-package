@@ -1,0 +1,11 @@
+framework module PayEngineSDK {
+  umbrella header "PayEngineSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module PayEngineSDK.Swift {
+  header "PayEngineSDK-Swift.h"
+  requires objc
+}

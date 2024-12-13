@@ -1,0 +1,323 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target x86_64-apple-ios12.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PayEngineSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import Foundation
+import PassKit
+@_exported import PayEngineSDK
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class PEComponent : UIKit.UIView, WebKit.WKScriptMessageHandler {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didMoveToSuperview()
+  @objc @_Concurrency.MainActor @preconcurrency public func setup(config: PEConfig, componentName: Swift.String, props: [Swift.String : Swift.String])
+  @objc @_Concurrency.MainActor @preconcurrency public func pinTo(view: UIKit.UIView)
+  @objc @_Concurrency.MainActor @preconcurrency public func registerEvent(name: Swift.String, handler: @escaping (_ data: Swift.AnyObject) -> Swift.Void)
+  @objc @_Concurrency.MainActor @preconcurrency public func removeEvent(name: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @objc deinit
+}
+@objc @objcMembers public class PEConfig : ObjectiveC.NSObject {
+  @objc public init(publicKey: Swift.String, baseURL: Swift.String? = nil)
+  @objc public func getBaseURL() -> Swift.String
+  @objc public func isProduction() -> Swift.Bool
+  @objc deinit
+}
+@objc public enum PEThemeMode : Swift.Int {
+  case system
+  case dark
+  case light
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class IBankAccountView : UIKit.UIStackView {
+  @_Concurrency.MainActor @preconcurrency public func setup(vaultId: Swift.String, env: Swift.String, publicKey: Swift.String, additionalFields: [PEField])
+  @_Concurrency.MainActor @preconcurrency public func createBankAccount(merchantId: Swift.String, completion: @escaping (Swift.Result<PEBankAccount, any Swift.Error>) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func createBankAccount(merchantId: Swift.String, additionalData: [Swift.String : Any], completion: @escaping (Swift.Result<PEBankAccount, any Swift.Error>) -> Swift.Void)
+  @objc @_Concurrency.MainActor @preconcurrency public func createBankAccount(merchantId: Swift.String, additionalData: [Swift.String : Any], completion: @escaping (PEBankAccount) -> Swift.Void, failure: @escaping (any Swift.Error) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func validate() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func showKeyboard()
+  @_Concurrency.MainActor @preconcurrency public func hideKeyboard()
+  @_Concurrency.MainActor @preconcurrency public func detectSizeChanges(onChange: @escaping (CoreFoundation.CGSize) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class PEApplePay : ObjectiveC.NSObject {
+  @objc public var delegate: (any PEApplePayDelegate)?
+  public func applePayStatus(for paymentNetworks: [ApplePayPaymentNetwork] = []) -> ApplePayStatus
+  @objc public func setupApplePayButton(for paymentRequest: ApplePayPaymentRequest, type: PassKit.PKPaymentButtonType = .checkout, style: PassKit.PKPaymentButtonStyle = .black) -> UIKit.UIButton?
+  @objc public func startApplePayPayment() throws
+  @objc public func startApplePaySetup()
+  @objc deinit
+}
+extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
+  @objc dynamic public func paymentAuthorizationViewControllerDidFinish(_ controller: PassKit.PKPaymentAuthorizationViewController)
+  @objc dynamic public func paymentAuthorizationViewController(_ controller: PassKit.PKPaymentAuthorizationViewController, didSelect paymentMethod: PassKit.PKPaymentMethod, handler completion: @escaping (PassKit.PKPaymentRequestPaymentMethodUpdate) -> Swift.Void)
+  @objc dynamic public func paymentAuthorizationViewController(_ controller: PassKit.PKPaymentAuthorizationViewController, didSelectShippingContact contact: PassKit.PKContact, handler completion: @escaping (PassKit.PKPaymentRequestShippingContactUpdate) -> Swift.Void)
+  @objc dynamic public func paymentAuthorizationViewController(_ controller: PassKit.PKPaymentAuthorizationViewController, didSelect shippingMethod: PassKit.PKShippingMethod, handler completion: @escaping (PassKit.PKPaymentRequestShippingMethodUpdate) -> Swift.Void)
+  @objc dynamic public func paymentAuthorizationViewController(_ controller: PassKit.PKPaymentAuthorizationViewController, didAuthorizePayment payment: PassKit.PKPayment, completion: @escaping (PassKit.PKPaymentAuthorizationStatus) -> Swift.Void)
+}
+@objc @objcMembers public class ThreeDSMessage : ObjectiveC.NSObject, Swift.Codable {
+  @objc public init(type: Swift.String, subtype: Swift.String, data: ThreeDSResult?) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @objcMembers public class ThreeDSResult : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var message: Swift.String?
+  @objc public var success: Swift.Bool
+  @objc public var transactionId: Swift.String?
+  @objc public init(message: Swift.String?, success: Swift.Bool, transactionId: Swift.String?) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class ThreeDSModal : UIKit.UIView, WebKit.WKNavigationDelegate, WebKit.WKScriptMessageHandler {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc @_Concurrency.MainActor @preconcurrency public func setup(config: PEConfig, threeDSData: Swift.String, handler: @escaping (_ data: ThreeDSResult) -> Swift.Void)
+  @objc @_Concurrency.MainActor @preconcurrency public func setupWebView()
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class PEPaymentView : ICardNumberView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didMoveToSuperview()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @objc @_Concurrency.MainActor @preconcurrency override public func setup(vaultId: Swift.String, env: Swift.String, publicKey: Swift.String, additionalFields: [PEField])
+  @objc @_Concurrency.MainActor @preconcurrency override public func validate() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency override public func createCard(merchantId: Swift.String, additionalData: [Swift.String : Any], completion: @escaping (Swift.Result<PECard, any Swift.Error>) -> Swift.Void)
+  @objc @_Concurrency.MainActor @preconcurrency override public func showKeyboard()
+  @objc deinit
+}
+@objc @objcMembers public class BankAccountResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public init(message: Swift.String, data: PEBankAccount) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @objcMembers public class BankAccountData : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var routingNumber: Swift.String
+  @objc public var last4: Swift.String
+  @objc public var firstName: Swift.String
+  @objc public var lastName: Swift.String
+  @objc public init(routingNumber: Swift.String, last4: Swift.String, firstName: Swift.String, lastName: Swift.String) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @objcMembers public class PEBankAccount : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var token: Swift.String
+  @objc public var bankAccountData: BankAccountData
+  @objc public init(token: Swift.String, bankAccountData: BankAccountData) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct KountSettingResponseData : Swift.Codable {
+  public init(enable_kount_integration: Swift.Bool, kount_client_id: Swift.String?, session_ID: Swift.String?) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @objcMembers public class PEField : ObjectiveC.NSObject {
+  public init(name: Swift.String, type: Swift.String, placeholder: Swift.String, isRequired: Swift.Bool, keyboardType: PEKeyboardType = .normal, pattern: Swift.String?)
+  @objc deinit
+}
+@objc @objcMembers public class CardResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public init(message: Swift.String, data: PECard) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @objcMembers public class CardData : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var id: Swift.String
+  @objc public var brand: Swift.String
+  @objc public var last4: Swift.String
+  @objc public var expMonth: Swift.Int
+  @objc public var expYear: Swift.Int
+  @objc public var name: Swift.String
+  @objc public var addressZip: Swift.String?
+  @objc public init(id: Swift.String, brand: Swift.String, last4: Swift.String, expMonth: Swift.Int, expYear: Swift.Int, name: Swift.String, addressZip: Swift.String?) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @objcMembers public class PECard : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var token: Swift.String
+  @objc public var cardData: CardData
+  @objc public init(token: Swift.String, cardData: CardData) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class PEBankAccountView : IBankAccountView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didMoveToSuperview()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency override public func setup(vaultId: Swift.String, env: Swift.String, publicKey: Swift.String, additionalFields: [PEField])
+  @_Concurrency.MainActor @preconcurrency override public func validate() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency override public func createBankAccount(merchantId: Swift.String, additionalData: [Swift.String : Any], completion: @escaping (Swift.Result<PEBankAccount, any Swift.Error>) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency override public func showKeyboard()
+  @objc deinit
+}
+@objc public enum ApplePayStatus : Swift.Int {
+  case eligible
+  case needSetup
+  case notEligible
+  public func ApplePayStatusRawValue() -> Swift.String
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct ApplePayConfigDataResponse : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class ApplePayPaymentRequest : ObjectiveC.NSObject {
+  @objc public func build(paymentItems: [PassKit.PKPaymentSummaryItem] = [], paymentAmount: Swift.Double, currencyCode: Swift.String = "USD", requiredBillingContactFields: Swift.Set<PassKit.PKContactField> = [], requiredShippingContactFields: Swift.Set<PassKit.PKContactField> = [], shippingMethods: [PassKit.PKShippingMethod] = [])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum PEApplePayResult : Swift.Int {
+  case success
+  case failure
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class FraudAnalyticsViewController : KountAnalyticsViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objcMembers public class WebViewHelper {
+  @objc public static func getBrowserInfo(view: UIKit.UIView, handler: @escaping (_ data: Swift.String) -> Swift.Void)
+  @objc deinit
+}
+@objc public class PayEngine : ObjectiveC.NSObject {
+  @objc public init(config: PEConfig)
+  @objc public static func setThemeMode(_ themMode: PEThemeMode)
+  @objc public func createComponent(name: Swift.String, props: [Swift.String : Swift.String]) -> PEComponent
+  @objc public func createSecureView(additionalFields: [PEField]?, completion: @escaping (ICardNumberView) -> Swift.Void)
+  @objc public func createBankAccountView(additionalFields: [PEField]?, completion: @escaping (IBankAccountView) -> Swift.Void)
+  @objc public func getBrowserInfo(view: UIKit.UIView, handler: @escaping (_ data: Swift.String) -> Swift.Void)
+  @objc public func perform3DSFlow(view: UIKit.UIView, threeDSData: Swift.String, handler: @escaping (_ data: ThreeDSResult) -> Swift.Void)
+  @objc public func createFraudMonitorSession(merchantId: Swift.String, completion: @escaping (Swift.String) -> Swift.Void)
+  public func createFraudMonitorSession(_ merchantId: Swift.String, completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
+  public func registerFraudMonitorBackgroundTask()
+  public func createSecureView(additionalFields: [PEField]?, completion: @escaping (Swift.Result<ICardNumberView, any Swift.Error>) -> Swift.Void)
+  public func createBankAccountView(additionalFields: [PEField]?, completion: @escaping (Swift.Result<IBankAccountView, any Swift.Error>) -> Swift.Void)
+  public func setupApplePay(merchantId: Swift.String, completion: @escaping (Swift.Result<PEApplePay, any Swift.Error>) -> Swift.Void)
+  public class func getCurrentVersionString() -> Swift.String?
+  @objc deinit
+}
+public struct SFSettingData : Swift.Codable {
+  public init(vault: Swift.String, environment: Swift.String, cname: Swift.String) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum PEKeyboardType {
+  case number
+  case alphabet
+  case phone
+  case normal
+  public static func == (a: PEKeyboardType, b: PEKeyboardType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ApplePayPaymentNetwork : Swift.Int, Swift.RawRepresentable, Swift.CaseIterable {
+  public typealias AllCases = [ApplePayPaymentNetwork]
+  public static var allCases: ApplePayPaymentNetwork.AllCases {
+    get
+  }
+  case Amex
+  case CartesBancaires
+  case Discover
+  case Eftpos
+  case Electron
+  @available(iOS 12.1.1, *)
+  case Elo
+  case idCredit
+  case Interac
+  case JCB
+  @available(iOS 12.1.1, *)
+  case Mada
+  case Maestro
+  case MasterCard
+  case PrivateLabel
+  case QuicPay
+  case Suica
+  case Visa
+  case VPay
+  public init?(rawValue: Swift.String)
+  public init?(applePayNetwork: PassKit.PKPaymentNetwork)
+  public typealias RawValue = Swift.String
+  public var rawValue: ApplePayPaymentNetwork.RawValue {
+    get
+  }
+}
+@objc public protocol PEApplePayDelegate {
+  @objc func paymentError(error: any Swift.Error)
+  @objc func paymentSheetDidMDismiss()
+  @objc func paymentTokenDidReturn(token: Swift.String, metadata: [Swift.String : Any]?, billingContact: PassKit.PKContact?, shippingContact: PassKit.PKContact?, completion: @escaping (PEApplePayResult) -> Swift.Void)
+  @objc func paymentTokenNotAvailable(error: (any Swift.Error)?)
+  @available(iOS 11.0, *)
+  @objc optional func didSelectShippingContact(_ contact: PassKit.PKContact, handler completion: @escaping (PassKit.PKPaymentRequestShippingContactUpdate) -> Swift.Void)
+  @available(iOS 11.0, *)
+  @objc optional func didSelectShippingMethod(_ shippingMethod: PassKit.PKShippingMethod, handler completion: @escaping (PassKit.PKPaymentRequestShippingMethodUpdate) -> Swift.Void)
+  @available(iOS 11.0, *)
+  @objc optional func didSelectPaymentMethod(_ paymentMethod: PassKit.PKPaymentMethod, handler completion: @escaping (PassKit.PKPaymentRequestPaymentMethodUpdate) -> Swift.Void)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func pinEdges(to view: UIKit.UIView)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func pinEdgesTo(to other: UIKit.UIView)
+}
+public struct MobilePaymentDataResponse : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MobilePaymentDataApplePayResponse : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class ICardNumberView : UIKit.UIStackView {
+  @_Concurrency.MainActor @preconcurrency public func setup(vaultId: Swift.String, env: Swift.String, publicKey: Swift.String, additionalFields: [PEField])
+  @_Concurrency.MainActor @preconcurrency public func createCard(merchantId: Swift.String, completion: @escaping (Swift.Result<PECard, any Swift.Error>) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func createCard(merchantId: Swift.String, additionalData: [Swift.String : Any], completion: @escaping (Swift.Result<PECard, any Swift.Error>) -> Swift.Void)
+  @objc @_Concurrency.MainActor @preconcurrency public func createCard(merchantId: Swift.String, additionalData: [Swift.String : Any], completion: @escaping (PECard) -> Swift.Void, failure: @escaping (any Swift.Error) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func validate() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func showKeyboard()
+  @_Concurrency.MainActor @preconcurrency public func hideKeyboard()
+  @_Concurrency.MainActor @preconcurrency public func detectSizeChanges(onChange: @escaping (CoreFoundation.CGSize) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension PEThemeMode : Swift.Equatable {}
+extension PEThemeMode : Swift.Hashable {}
+extension PEThemeMode : Swift.RawRepresentable {}
+extension ApplePayStatus : Swift.Equatable {}
+extension ApplePayStatus : Swift.Hashable {}
+extension ApplePayStatus : Swift.RawRepresentable {}
+extension PEApplePayResult : Swift.Equatable {}
+extension PEApplePayResult : Swift.Hashable {}
+extension PEApplePayResult : Swift.RawRepresentable {}
+extension PEKeyboardType : Swift.Equatable {}
+extension PEKeyboardType : Swift.Hashable {}
+extension ApplePayPaymentNetwork : Swift.Equatable {}
+extension ApplePayPaymentNetwork : Swift.Hashable {}
