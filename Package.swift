@@ -22,7 +22,7 @@ let package = Package(
         .target(
             name: "PayEnginePackage",
             dependencies: [
-                "PEDevicePaymentSDK",
+                "PayEngineSDK",
             ]),
 
     ]
