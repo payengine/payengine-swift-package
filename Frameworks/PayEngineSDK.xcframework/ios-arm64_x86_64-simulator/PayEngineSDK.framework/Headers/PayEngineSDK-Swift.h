@@ -417,7 +417,7 @@ SWIFT_CLASS("_TtC12PayEngineSDK28FraudAnalyticsViewController")
 
 SWIFT_CLASS("_TtC12PayEngineSDK16IBankAccountView")
 @interface IBankAccountView : UIStackView
-- (void)createBankAccountWithMerchantId:(NSString * _Nonnull)merchantId additionalData:(NSDictionary<NSString *, id> * _Nonnull)additionalData completion:(void (^ _Nonnull)(PEBankAccount * _Nonnull))completion failure:(void (^ _Nonnull)(NSError * _Nonnull))failure;
+- (void)createBankAccountWithMerchantId:(NSString * _Nullable)merchantId additionalData:(NSDictionary<NSString *, id> * _Nonnull)additionalData completion:(void (^ _Nonnull)(PEBankAccount * _Nonnull))completion failure:(void (^ _Nonnull)(NSError * _Nonnull))failure;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -425,7 +425,7 @@ SWIFT_CLASS("_TtC12PayEngineSDK16IBankAccountView")
 
 SWIFT_CLASS("_TtC12PayEngineSDK15ICardNumberView")
 @interface ICardNumberView : UIStackView
-- (void)createCardWithMerchantId:(NSString * _Nonnull)merchantId additionalData:(NSDictionary<NSString *, id> * _Nonnull)additionalData completion:(void (^ _Nonnull)(PECard * _Nonnull))completion failure:(void (^ _Nonnull)(NSError * _Nonnull))failure;
+- (void)createCardWithMerchantId:(NSString * _Nullable)merchantId additionalData:(NSDictionary<NSString *, id> * _Nonnull)additionalData completion:(void (^ _Nonnull)(PECard * _Nonnull))completion failure:(void (^ _Nonnull)(NSError * _Nonnull))failure;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1052,7 +1052,7 @@ SWIFT_CLASS("_TtC12PayEngineSDK28FraudAnalyticsViewController")
 
 SWIFT_CLASS("_TtC12PayEngineSDK16IBankAccountView")
 @interface IBankAccountView : UIStackView
-- (void)createBankAccountWithMerchantId:(NSString * _Nonnull)merchantId additionalData:(NSDictionary<NSString *, id> * _Nonnull)additionalData completion:(void (^ _Nonnull)(PEBankAccount * _Nonnull))completion failure:(void (^ _Nonnull)(NSError * _Nonnull))failure;
+- (void)createBankAccountWithMerchantId:(NSString * _Nullable)merchantId additionalData:(NSDictionary<NSString *, id> * _Nonnull)additionalData completion:(void (^ _Nonnull)(PEBankAccount * _Nonnull))completion failure:(void (^ _Nonnull)(NSError * _Nonnull))failure;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1060,7 +1060,7 @@ SWIFT_CLASS("_TtC12PayEngineSDK16IBankAccountView")
 
 SWIFT_CLASS("_TtC12PayEngineSDK15ICardNumberView")
 @interface ICardNumberView : UIStackView
-- (void)createCardWithMerchantId:(NSString * _Nonnull)merchantId additionalData:(NSDictionary<NSString *, id> * _Nonnull)additionalData completion:(void (^ _Nonnull)(PECard * _Nonnull))completion failure:(void (^ _Nonnull)(NSError * _Nonnull))failure;
+- (void)createCardWithMerchantId:(NSString * _Nullable)merchantId additionalData:(NSDictionary<NSString *, id> * _Nonnull)additionalData completion:(void (^ _Nonnull)(PECard * _Nonnull))completion failure:(void (^ _Nonnull)(NSError * _Nonnull))failure;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end

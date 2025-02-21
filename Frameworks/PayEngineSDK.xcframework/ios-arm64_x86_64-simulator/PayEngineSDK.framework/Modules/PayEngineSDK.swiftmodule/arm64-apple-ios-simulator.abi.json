@@ -986,9 +986,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeFunc",
@@ -1024,8 +1032,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12PayEngineSDK16IBankAccountViewC010createBankE010merchantId10completionySS_ys6ResultOyAA06PEBankE0Cs5Error_pGctF",
-            "mangledName": "$s12PayEngineSDK16IBankAccountViewC010createBankE010merchantId10completionySS_ys6ResultOyAA06PEBankE0Cs5Error_pGctF",
+            "usr": "s:12PayEngineSDK16IBankAccountViewC010createBankE010merchantId10completionySSSg_ys6ResultOyAA06PEBankE0Cs5Error_pGctF",
+            "mangledName": "$s12PayEngineSDK16IBankAccountViewC010createBankE010merchantId10completionySSSg_ys6ResultOyAA06PEBankE0Cs5Error_pGctF",
             "moduleName": "PayEngineSDK",
             "declAttributes": [
               "Preconcurrency",
@@ -1046,9 +1054,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -1103,8 +1119,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12PayEngineSDK16IBankAccountViewC010createBankE010merchantId14additionalData10completionySS_SDySSypGys6ResultOyAA06PEBankE0Cs5Error_pGctF",
-            "mangledName": "$s12PayEngineSDK16IBankAccountViewC010createBankE010merchantId14additionalData10completionySS_SDySSypGys6ResultOyAA06PEBankE0Cs5Error_pGctF",
+            "usr": "s:12PayEngineSDK16IBankAccountViewC010createBankE010merchantId14additionalData10completionySSSg_SDySSypGys6ResultOyAA06PEBankE0Cs5Error_pGctF",
+            "mangledName": "$s12PayEngineSDK16IBankAccountViewC010createBankE010merchantId14additionalData10completionySSSg_SDySSypGys6ResultOyAA06PEBankE0Cs5Error_pGctF",
             "moduleName": "PayEngineSDK",
             "declAttributes": [
               "Preconcurrency",
@@ -1125,9 +1141,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -1187,7 +1211,7 @@
             ],
             "declKind": "Func",
             "usr": "c:@M@PayEngineSDK@objc(cs)IBankAccountView(im)createBankAccountWithMerchantId:additionalData:completion:failure:",
-            "mangledName": "$s12PayEngineSDK16IBankAccountViewC010createBankE010merchantId14additionalData10completion7failureySS_SDySSypGyAA06PEBankE0Ccys5Error_pctF",
+            "mangledName": "$s12PayEngineSDK16IBankAccountViewC010createBankE010merchantId14additionalData10completion7failureySSSg_SDySSypGyAA06PEBankE0Ccys5Error_pctF",
             "moduleName": "PayEngineSDK",
             "objc_name": "createBankAccountWithMerchantId:additionalData:completion:failure:",
             "declAttributes": [
@@ -3465,9 +3489,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -3522,8 +3554,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12PayEngineSDK13PEPaymentViewC10createCard10merchantId14additionalData10completionySS_SDySSypGys6ResultOyAA6PECardCs5Error_pGctF",
-            "mangledName": "$s12PayEngineSDK13PEPaymentViewC10createCard10merchantId14additionalData10completionySS_SDySSypGys6ResultOyAA6PECardCs5Error_pGctF",
+            "usr": "s:12PayEngineSDK13PEPaymentViewC10createCard10merchantId14additionalData10completionySSSg_SDySSypGys6ResultOyAA6PECardCs5Error_pGctF",
+            "mangledName": "$s12PayEngineSDK13PEPaymentViewC10createCard10merchantId14additionalData10completionySSSg_SDySSypGys6ResultOyAA6PECardCs5Error_pGctF",
             "moduleName": "PayEngineSDK",
             "overriding": true,
             "declAttributes": [
@@ -7006,9 +7038,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -7063,8 +7103,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12PayEngineSDK17PEBankAccountViewC010createBankE010merchantId14additionalData10completionySS_SDySSypGys6ResultOyAA0dE0Cs5Error_pGctF",
-            "mangledName": "$s12PayEngineSDK17PEBankAccountViewC010createBankE010merchantId14additionalData10completionySS_SDySSypGys6ResultOyAA0dE0Cs5Error_pGctF",
+            "usr": "s:12PayEngineSDK17PEBankAccountViewC010createBankE010merchantId14additionalData10completionySSSg_SDySSypGys6ResultOyAA0dE0Cs5Error_pGctF",
+            "mangledName": "$s12PayEngineSDK17PEBankAccountViewC010createBankE010merchantId14additionalData10completionySSSg_SDySSypGys6ResultOyAA0dE0Cs5Error_pGctF",
             "moduleName": "PayEngineSDK",
             "overriding": true,
             "declAttributes": [
@@ -11501,9 +11541,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeFunc",
@@ -11539,8 +11587,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12PayEngineSDK15ICardNumberViewC10createCard10merchantId10completionySS_ys6ResultOyAA6PECardCs5Error_pGctF",
-            "mangledName": "$s12PayEngineSDK15ICardNumberViewC10createCard10merchantId10completionySS_ys6ResultOyAA6PECardCs5Error_pGctF",
+            "usr": "s:12PayEngineSDK15ICardNumberViewC10createCard10merchantId10completionySSSg_ys6ResultOyAA6PECardCs5Error_pGctF",
+            "mangledName": "$s12PayEngineSDK15ICardNumberViewC10createCard10merchantId10completionySSSg_ys6ResultOyAA6PECardCs5Error_pGctF",
             "moduleName": "PayEngineSDK",
             "declAttributes": [
               "Preconcurrency",
@@ -11561,9 +11609,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -11618,8 +11674,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12PayEngineSDK15ICardNumberViewC10createCard10merchantId14additionalData10completionySS_SDySSypGys6ResultOyAA6PECardCs5Error_pGctF",
-            "mangledName": "$s12PayEngineSDK15ICardNumberViewC10createCard10merchantId14additionalData10completionySS_SDySSypGys6ResultOyAA6PECardCs5Error_pGctF",
+            "usr": "s:12PayEngineSDK15ICardNumberViewC10createCard10merchantId14additionalData10completionySSSg_SDySSypGys6ResultOyAA6PECardCs5Error_pGctF",
+            "mangledName": "$s12PayEngineSDK15ICardNumberViewC10createCard10merchantId14additionalData10completionySSSg_SDySSypGys6ResultOyAA6PECardCs5Error_pGctF",
             "moduleName": "PayEngineSDK",
             "declAttributes": [
               "Preconcurrency",
@@ -11640,9 +11696,17 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -11702,7 +11766,7 @@
             ],
             "declKind": "Func",
             "usr": "c:@M@PayEngineSDK@objc(cs)ICardNumberView(im)createCardWithMerchantId:additionalData:completion:failure:",
-            "mangledName": "$s12PayEngineSDK15ICardNumberViewC10createCard10merchantId14additionalData10completion7failureySS_SDySSypGyAA6PECardCcys5Error_pctF",
+            "mangledName": "$s12PayEngineSDK15ICardNumberViewC10createCard10merchantId14additionalData10completion7failureySSSg_SDySSypGyAA6PECardCcys5Error_pctF",
             "moduleName": "PayEngineSDK",
             "objc_name": "createCardWithMerchantId:additionalData:completion:failure:",
             "declAttributes": [
