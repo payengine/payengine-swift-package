@@ -381,6 +381,14 @@ SWIFT_CLASS("_TtC12PayEngineSDK19BankAccountResponse")
 @end
 
 
+SWIFT_CLASS("_TtC12PayEngineSDK24BankAccountResponseError")
+@interface BankAccountResponseError : NSObject
+- (nullable instancetype)initWithError:(BOOL)error message:(NSString * _Nonnull)message error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC12PayEngineSDK8CardData")
 @interface CardData : NSObject
 @property (nonatomic, copy) NSString * _Nonnull id;
@@ -400,6 +408,14 @@ SWIFT_CLASS("_TtC12PayEngineSDK8CardData")
 SWIFT_CLASS("_TtC12PayEngineSDK12CardResponse")
 @interface CardResponse : NSObject
 - (nullable instancetype)initWithMessage:(NSString * _Nonnull)message data:(PECard * _Nonnull)data error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC12PayEngineSDK17CardResponseError")
+@interface CardResponseError : NSObject
+- (nullable instancetype)initWithError:(BOOL)error message:(NSString * _Nonnull)message error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -552,7 +568,7 @@ SWIFT_CLASS("_TtC12PayEngineSDK13PEPaymentView")
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)didMoveToSuperview;
 - (void)layoutSubviews;
-- (void)setupWithVaultId:(NSString * _Nonnull)vaultId env:(NSString * _Nonnull)env publicKey:(NSString * _Nonnull)publicKey additionalFields:(NSArray<PEField *> * _Nonnull)additionalFields;
+- (void)setupWithVaultId:(NSString * _Nonnull)vaultId env:(NSString * _Nonnull)env hostname:(NSString * _Nonnull)hostname publicKey:(NSString * _Nonnull)publicKey additionalFields:(NSArray<PEField *> * _Nonnull)additionalFields;
 - (BOOL)validate SWIFT_WARN_UNUSED_RESULT;
 - (void)showKeyboard;
 @end
@@ -1016,6 +1032,14 @@ SWIFT_CLASS("_TtC12PayEngineSDK19BankAccountResponse")
 @end
 
 
+SWIFT_CLASS("_TtC12PayEngineSDK24BankAccountResponseError")
+@interface BankAccountResponseError : NSObject
+- (nullable instancetype)initWithError:(BOOL)error message:(NSString * _Nonnull)message error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC12PayEngineSDK8CardData")
 @interface CardData : NSObject
 @property (nonatomic, copy) NSString * _Nonnull id;
@@ -1035,6 +1059,14 @@ SWIFT_CLASS("_TtC12PayEngineSDK8CardData")
 SWIFT_CLASS("_TtC12PayEngineSDK12CardResponse")
 @interface CardResponse : NSObject
 - (nullable instancetype)initWithMessage:(NSString * _Nonnull)message data:(PECard * _Nonnull)data error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC12PayEngineSDK17CardResponseError")
+@interface CardResponseError : NSObject
+- (nullable instancetype)initWithError:(BOOL)error message:(NSString * _Nonnull)message error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1187,7 +1219,7 @@ SWIFT_CLASS("_TtC12PayEngineSDK13PEPaymentView")
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)didMoveToSuperview;
 - (void)layoutSubviews;
-- (void)setupWithVaultId:(NSString * _Nonnull)vaultId env:(NSString * _Nonnull)env publicKey:(NSString * _Nonnull)publicKey additionalFields:(NSArray<PEField *> * _Nonnull)additionalFields;
+- (void)setupWithVaultId:(NSString * _Nonnull)vaultId env:(NSString * _Nonnull)env hostname:(NSString * _Nonnull)hostname publicKey:(NSString * _Nonnull)publicKey additionalFields:(NSArray<PEField *> * _Nonnull)additionalFields;
 - (BOOL)validate SWIFT_WARN_UNUSED_RESULT;
 - (void)showKeyboard;
 @end

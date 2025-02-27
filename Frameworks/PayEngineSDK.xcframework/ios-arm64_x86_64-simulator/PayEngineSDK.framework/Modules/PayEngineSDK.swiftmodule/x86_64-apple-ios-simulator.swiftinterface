@@ -38,7 +38,7 @@ import _SwiftConcurrencyShims
   }
 }
 @_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class IBankAccountView : UIKit.UIStackView {
-  @_Concurrency.MainActor @preconcurrency public func setup(vaultId: Swift.String, env: Swift.String, publicKey: Swift.String, additionalFields: [PEField])
+  @_Concurrency.MainActor @preconcurrency public func setup(vaultId: Swift.String, env: Swift.String, hostname: Swift.String, publicKey: Swift.String, additionalFields: [PEField])
   @_Concurrency.MainActor @preconcurrency public func createBankAccount(merchantId: Swift.String?, completion: @escaping (Swift.Result<PEBankAccount, any Swift.Error>) -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency public func createBankAccount(merchantId: Swift.String?, additionalData: [Swift.String : Any], completion: @escaping (Swift.Result<PEBankAccount, any Swift.Error>) -> Swift.Void)
   @objc @_Concurrency.MainActor @preconcurrency public func createBankAccount(merchantId: Swift.String?, additionalData: [Swift.String : Any], completion: @escaping (PEBankAccount) -> Swift.Void, failure: @escaping (any Swift.Error) -> Swift.Void)
@@ -92,7 +92,7 @@ extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class PEPaymentView : ICardNumberView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didMoveToSuperview()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
-  @objc @_Concurrency.MainActor @preconcurrency override public func setup(vaultId: Swift.String, env: Swift.String, publicKey: Swift.String, additionalFields: [PEField])
+  @objc @_Concurrency.MainActor @preconcurrency override public func setup(vaultId: Swift.String, env: Swift.String, hostname: Swift.String, publicKey: Swift.String, additionalFields: [PEField])
   @objc @_Concurrency.MainActor @preconcurrency override public func validate() -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency override public func createCard(merchantId: Swift.String?, additionalData: [Swift.String : Any], completion: @escaping (Swift.Result<PECard, any Swift.Error>) -> Swift.Void)
   @objc @_Concurrency.MainActor @preconcurrency override public func showKeyboard()
@@ -110,6 +110,12 @@ extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
   @objc public var firstName: Swift.String
   @objc public var lastName: Swift.String
   @objc public init(routingNumber: Swift.String, last4: Swift.String, firstName: Swift.String, lastName: Swift.String) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @objcMembers public class BankAccountResponseError : ObjectiveC.NSObject, Swift.Codable {
+  @objc public init(error: Swift.Bool, message: Swift.String) throws
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -150,6 +156,12 @@ public struct KountSettingResponseData : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
+@objc @objcMembers public class CardResponseError : ObjectiveC.NSObject, Swift.Codable {
+  @objc public init(error: Swift.Bool, message: Swift.String) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
 @objc @objcMembers public class PECard : ObjectiveC.NSObject, Swift.Codable {
   @objc public var token: Swift.String
   @objc public var cardData: CardData
@@ -161,7 +173,7 @@ public struct KountSettingResponseData : Swift.Codable {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class PEBankAccountView : IBankAccountView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didMoveToSuperview()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
-  @_Concurrency.MainActor @preconcurrency override public func setup(vaultId: Swift.String, env: Swift.String, publicKey: Swift.String, additionalFields: [PEField])
+  @_Concurrency.MainActor @preconcurrency override public func setup(vaultId: Swift.String, env: Swift.String, hostname: Swift.String, publicKey: Swift.String, additionalFields: [PEField])
   @_Concurrency.MainActor @preconcurrency override public func validate() -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency override public func createBankAccount(merchantId: Swift.String?, additionalData: [Swift.String : Any], completion: @escaping (Swift.Result<PEBankAccount, any Swift.Error>) -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency override public func showKeyboard()
@@ -296,7 +308,7 @@ public struct MobilePaymentDataApplePayResponse : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class ICardNumberView : UIKit.UIStackView {
-  @_Concurrency.MainActor @preconcurrency public func setup(vaultId: Swift.String, env: Swift.String, publicKey: Swift.String, additionalFields: [PEField])
+  @_Concurrency.MainActor @preconcurrency public func setup(vaultId: Swift.String, env: Swift.String, hostname: Swift.String, publicKey: Swift.String, additionalFields: [PEField])
   @_Concurrency.MainActor @preconcurrency public func createCard(merchantId: Swift.String?, completion: @escaping (Swift.Result<PECard, any Swift.Error>) -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency public func createCard(merchantId: Swift.String?, additionalData: [Swift.String : Any], completion: @escaping (Swift.Result<PECard, any Swift.Error>) -> Swift.Void)
   @objc @_Concurrency.MainActor @preconcurrency public func createCard(merchantId: Swift.String?, additionalData: [Swift.String : Any], completion: @escaping (PECard) -> Swift.Void, failure: @escaping (any Swift.Error) -> Swift.Void)

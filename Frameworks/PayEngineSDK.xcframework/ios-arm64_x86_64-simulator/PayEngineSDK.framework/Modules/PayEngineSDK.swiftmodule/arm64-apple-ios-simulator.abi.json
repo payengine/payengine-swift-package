@@ -923,12 +923,18 @@
           {
             "kind": "Function",
             "name": "setup",
-            "printedName": "setup(vaultId:env:publicKey:additionalFields:)",
+            "printedName": "setup(vaultId:env:hostname:publicKey:additionalFields:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -964,8 +970,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12PayEngineSDK16IBankAccountViewC5setup7vaultId3env9publicKey16additionalFieldsySS_S2SSayAA7PEFieldCGtF",
-            "mangledName": "$s12PayEngineSDK16IBankAccountViewC5setup7vaultId3env9publicKey16additionalFieldsySS_S2SSayAA7PEFieldCGtF",
+            "usr": "s:12PayEngineSDK16IBankAccountViewC5setup7vaultId3env8hostname9publicKey16additionalFieldsySS_S3SSayAA7PEFieldCGtF",
+            "mangledName": "$s12PayEngineSDK16IBankAccountViewC5setup7vaultId3env8hostname9publicKey16additionalFieldsySS_S3SSayAA7PEFieldCGtF",
             "moduleName": "PayEngineSDK",
             "declAttributes": [
               "Preconcurrency",
@@ -3397,12 +3403,18 @@
           {
             "kind": "Function",
             "name": "setup",
-            "printedName": "setup(vaultId:env:publicKey:additionalFields:)",
+            "printedName": "setup(vaultId:env:hostname:publicKey:additionalFields:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -3438,8 +3450,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@PayEngineSDK@objc(cs)PEPaymentView(im)setupWithVaultId:env:publicKey:additionalFields:",
-            "mangledName": "$s12PayEngineSDK13PEPaymentViewC5setup7vaultId3env9publicKey16additionalFieldsySS_S2SSayAA7PEFieldCGtF",
+            "usr": "c:@M@PayEngineSDK@objc(cs)PEPaymentView(im)setupWithVaultId:env:hostname:publicKey:additionalFields:",
+            "mangledName": "$s12PayEngineSDK13PEPaymentViewC5setup7vaultId3env8hostname9publicKey16additionalFieldsySS_S3SSayAA7PEFieldCGtF",
             "moduleName": "PayEngineSDK",
             "overriding": true,
             "declAttributes": [
@@ -4430,6 +4442,220 @@
         "declKind": "Class",
         "usr": "c:@M@PayEngineSDK@objc(cs)BankAccountData",
         "mangledName": "$s12PayEngineSDK15BankAccountDataC",
+        "moduleName": "PayEngineSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BankAccountResponseError",
+        "printedName": "BankAccountResponseError",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(error:message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BankAccountResponseError",
+                "printedName": "PayEngineSDK.BankAccountResponseError",
+                "usr": "c:@M@PayEngineSDK@objc(cs)BankAccountResponseError"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayEngineSDK@objc(cs)BankAccountResponseError(im)initWithError:message:error:",
+            "mangledName": "$s12PayEngineSDK24BankAccountResponseErrorC5error7messageACSb_SStKcfc",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BankAccountResponseError",
+                "printedName": "PayEngineSDK.BankAccountResponseError",
+                "usr": "c:@M@PayEngineSDK@objc(cs)BankAccountResponseError"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayEngineSDK@objc(cs)BankAccountResponseError(im)init",
+            "mangledName": "$s12PayEngineSDK24BankAccountResponseErrorCACycfc",
+            "moduleName": "PayEngineSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BankAccountResponseError",
+                "printedName": "PayEngineSDK.BankAccountResponseError",
+                "usr": "c:@M@PayEngineSDK@objc(cs)BankAccountResponseError"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12PayEngineSDK24BankAccountResponseErrorC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12PayEngineSDK24BankAccountResponseErrorC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "PayEngineSDK",
+            "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12PayEngineSDK24BankAccountResponseErrorC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12PayEngineSDK24BankAccountResponseErrorC6encode2toys7Encoder_p_tKF",
+            "moduleName": "PayEngineSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PayEngineSDK@objc(cs)BankAccountResponseError",
+        "mangledName": "$s12PayEngineSDK24BankAccountResponseErrorC",
         "moduleName": "PayEngineSDK",
         "declAttributes": [
           "AccessControl",
@@ -6438,6 +6664,220 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "CardResponseError",
+        "printedName": "CardResponseError",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(error:message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CardResponseError",
+                "printedName": "PayEngineSDK.CardResponseError",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardResponseError"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardResponseError(im)initWithError:message:error:",
+            "mangledName": "$s12PayEngineSDK17CardResponseErrorC5error7messageACSb_SStKcfc",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CardResponseError",
+                "printedName": "PayEngineSDK.CardResponseError",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardResponseError"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardResponseError(im)init",
+            "mangledName": "$s12PayEngineSDK17CardResponseErrorCACycfc",
+            "moduleName": "PayEngineSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CardResponseError",
+                "printedName": "PayEngineSDK.CardResponseError",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardResponseError"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12PayEngineSDK17CardResponseErrorC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12PayEngineSDK17CardResponseErrorC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "PayEngineSDK",
+            "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12PayEngineSDK17CardResponseErrorC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12PayEngineSDK17CardResponseErrorC6encode2toys7Encoder_p_tKF",
+            "moduleName": "PayEngineSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PayEngineSDK@objc(cs)CardResponseError",
+        "mangledName": "$s12PayEngineSDK17CardResponseErrorC",
+        "moduleName": "PayEngineSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "PECard",
         "printedName": "PECard",
         "children": [
@@ -6948,12 +7388,18 @@
           {
             "kind": "Function",
             "name": "setup",
-            "printedName": "setup(vaultId:env:publicKey:additionalFields:)",
+            "printedName": "setup(vaultId:env:hostname:publicKey:additionalFields:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -6989,8 +7435,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12PayEngineSDK17PEBankAccountViewC5setup7vaultId3env9publicKey16additionalFieldsySS_S2SSayAA7PEFieldCGtF",
-            "mangledName": "$s12PayEngineSDK17PEBankAccountViewC5setup7vaultId3env9publicKey16additionalFieldsySS_S2SSayAA7PEFieldCGtF",
+            "usr": "s:12PayEngineSDK17PEBankAccountViewC5setup7vaultId3env8hostname9publicKey16additionalFieldsySS_S3SSayAA7PEFieldCGtF",
+            "mangledName": "$s12PayEngineSDK17PEBankAccountViewC5setup7vaultId3env8hostname9publicKey16additionalFieldsySS_S3SSayAA7PEFieldCGtF",
             "moduleName": "PayEngineSDK",
             "overriding": true,
             "declAttributes": [
@@ -11478,12 +11924,18 @@
           {
             "kind": "Function",
             "name": "setup",
-            "printedName": "setup(vaultId:env:publicKey:additionalFields:)",
+            "printedName": "setup(vaultId:env:hostname:publicKey:additionalFields:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -11519,8 +11971,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12PayEngineSDK15ICardNumberViewC5setup7vaultId3env9publicKey16additionalFieldsySS_S2SSayAA7PEFieldCGtF",
-            "mangledName": "$s12PayEngineSDK15ICardNumberViewC5setup7vaultId3env9publicKey16additionalFieldsySS_S2SSayAA7PEFieldCGtF",
+            "usr": "s:12PayEngineSDK15ICardNumberViewC5setup7vaultId3env8hostname9publicKey16additionalFieldsySS_S3SSayAA7PEFieldCGtF",
+            "mangledName": "$s12PayEngineSDK15ICardNumberViewC5setup7vaultId3env8hostname9publicKey16additionalFieldsySS_S3SSayAA7PEFieldCGtF",
             "moduleName": "PayEngineSDK",
             "declAttributes": [
               "Preconcurrency",
@@ -12349,14 +12801,28 @@
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/BankAccountResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 1444,
+      "offset": 1376,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/BankAccountResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 1407,
+      "length": 9,
+      "value": "\"message\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/BankAccountResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 1806,
       "length": 7,
       "value": "\"token\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/BankAccountResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 1483,
+      "offset": 1845,
       "length": 14,
       "value": "\"account_data\""
     },
@@ -12496,14 +12962,28 @@
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 1636,
+      "offset": 1582,
+      "length": 7,
+      "value": "\"error\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 1613,
+      "length": 9,
+      "value": "\"message\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 1992,
       "length": 7,
       "value": "\"token\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 1668,
+      "offset": 2024,
       "length": 11,
       "value": "\"card_data\""
     },
