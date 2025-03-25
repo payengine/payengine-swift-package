@@ -7,33 +7,9 @@
 
 #import <Foundation/Foundation.h>
 
-// Error Codes
-typedef NS_ENUM(NSInteger, KDataCollectorErrorCode) {
-    
-    KDataCollectorErrorCodeUnknown = 0,
-    
-    // A system error occurred
-    KDataCollectorErrorCodeNSError,
-    
-    // A required collector timed out
-    KDataCollectorErrorCodeTimeout,
-    
-    // A bad parameter was passed into the data collector
-    KDataCollectorErrorCodeBadParameter,
-    
-    // A network connection isn't available
-    KDataCollectorErrorCodeNoNetwork,
-    
-    // An error occurred while validating a response from the server
-    KDataCollectorErrorCodeResponseValidation,
-};
-
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString *const KDataCollectorErrorDomain;
 
-// Version of the Kount Data Collector SDK
-extern NSString *const KDataCollectorVersion;
 
 // Configuration settings for location collection
 typedef NS_ENUM(NSInteger, KLocationCollectorConfig) {
@@ -49,11 +25,12 @@ typedef NS_ENUM(NSInteger, KLocationCollectorConfig) {
     KLocationCollectorConfigSkip,          
 };
 
+
 // Configuration settings Kount collection environment
 typedef NS_ENUM(NSInteger, KEnvironment) {
     
     // Unknown Environment
-    KEnvironmentUnknown = 0, 
+    KEnvironmentUnknown = 0,
     
     // Test Environment
     KEnvironmentTest,
@@ -61,6 +38,8 @@ typedef NS_ENUM(NSInteger, KEnvironment) {
     // Production Environment
     KEnvironmentProduction,
 };
+
+
 
 // KDataCollector enables you to collect device information for the given session
 //
