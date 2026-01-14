@@ -8990,6 +8990,13 @@
       "value": "\"transaction_id\""
     },
     {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Components\/PEPaymentView.swift",
+      "kind": "StringLiteral",
+      "offset": 377,
+      "length": 5,
+      "value": "\"vgs\""
+    },
+    {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/BankAccountResponseModel.swift",
       "kind": "StringLiteral",
       "offset": 754,
@@ -9256,6 +9263,13 @@
       "value": "\"vauiltId\""
     },
     {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Components\/PEBankAccountView.swift",
+      "kind": "StringLiteral",
+      "offset": 393,
+      "length": 5,
+      "value": "\"vgs\""
+    },
+    {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Features\/ApplePay\/ApplePayStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 471,
@@ -9377,21 +9391,28 @@
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/SecureFieldResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 731,
+      "offset": 745,
+      "length": 9,
+      "value": "\"adapter\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/SecureFieldResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 784,
       "length": 7,
       "value": "\"vault\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/SecureFieldResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 771,
+      "offset": 821,
       "length": 13,
       "value": "\"environment\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/SecureFieldResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 811,
+      "offset": 861,
       "length": 7,
       "value": "\"cname\""
     },
