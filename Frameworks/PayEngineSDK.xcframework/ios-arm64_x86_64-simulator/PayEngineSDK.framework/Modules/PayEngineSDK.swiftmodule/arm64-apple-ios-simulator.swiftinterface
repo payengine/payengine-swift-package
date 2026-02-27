@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
-// swift-module-flags: -target arm64-apple-ios12.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PayEngineSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-module-flags: -target arm64-apple-ios12.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PayEngineSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import Foundation
 import PassKit
 @_exported import PayEngineSDK
@@ -12,12 +12,15 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+import _WebKit_SwiftUI
 public protocol PEAccessTokenRepresentable {
   var accessToken: Swift.String { get }
   var expiresIn: Swift.Int64 { get }
 }
 @objc @objcMembers public class PEConfig : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(publicKey: Swift.String, baseURL: Swift.String? = nil)
+  #endif
   @objc public func getBaseURL() -> Swift.String
   @objc public func isProduction() -> Swift.Bool
   @objc deinit
@@ -26,16 +29,24 @@ public protocol PEAccessTokenRepresentable {
   case system
   case dark
   case light
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
 @_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class IBankAccountView : UIKit.UIStackView {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func createBankAccount(merchantId: Swift.String?, completion: @escaping (Swift.Result<PEBankAccount, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func createBankAccount(merchantId: Swift.String?, additionalData: [Swift.String : Any], completion: @escaping (Swift.Result<PEBankAccount, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency public func createBankAccount(merchantId: Swift.String?, additionalData: [Swift.String : Any], completion: @escaping (PEBankAccount) -> Swift.Void, failure: @escaping (any Swift.Error) -> Swift.Void)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func validate() -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency public func showKeyboard()
   @_Concurrency.MainActor @preconcurrency public func hideKeyboard()
@@ -47,7 +58,9 @@ public protocol PEAccessTokenRepresentable {
 @_hasMissingDesignatedInitializers @objc public class PEApplePay : ObjectiveC.NSObject {
   @objc public var delegate: (any PEApplePayDelegate)?
   public func applePayStatus(for paymentNetworks: [ApplePayPaymentNetwork] = []) -> ApplePayStatus
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func setupApplePayButton(for paymentRequest: ApplePayPaymentRequest, type: PassKit.PKPaymentButtonType = .checkout, style: PassKit.PKPaymentButtonStyle = .black) -> UIKit.UIButton?
+  #endif
   @objc deinit
 }
 extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
@@ -88,22 +101,40 @@ extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
   @objc public var isRequired: Swift.Bool
   public var keyboardType: PEKeyboardType
   @objc public var pattern: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(name: Swift.String, type: Swift.String, placeholder: Swift.String, isRequired: Swift.Bool, keyboardType: PEKeyboardType = .normal, pattern: Swift.String?)
+  #endif
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class CardData : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let id: Swift.String
+  @objc final public let merchantId: Swift.String?
   @objc final public let brand: Swift.String
   @objc final public let last4: Swift.String
   @objc final public let expMonth: Swift.Int
   @objc final public let expYear: Swift.Int
   @objc final public let name: Swift.String
+  @objc final public let email: Swift.String?
+  @objc final public let phoneNumber: Swift.String?
   @objc final public let addressZip: Swift.String?
+  final public let surchargeAllowed: Swift.Bool?
+  final public let networkTokenize: Swift.Bool?
+  @objc final public let addressLine1: Swift.String?
+  @objc final public let addressLine2: Swift.String?
+  @objc final public let addressCountry: Swift.String?
+  @objc final public let addressCity: Swift.String?
+  @objc final public let addressState: Swift.String?
+  final public let storePaymentMethod: Swift.Bool?
+  @objc final public let expiresAt: Swift.String?
+  @objc final public let country: Swift.String?
+  @objc final public let type: Swift.String?
+  final public let prepaidBenefits: Swift.Bool?
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class PECard : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let env: Swift.String?
   @objc final public let token: Swift.String
   @objc final public let cardData: CardData
   @objc deinit
@@ -115,7 +146,9 @@ extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
   case needSetup
   case notEligible
   public func ApplePayStatusRawValue() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -129,7 +162,9 @@ extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
 @objc public enum PEApplePayResult : Swift.Int {
   case success
   case failure
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -138,21 +173,35 @@ extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
 @objc public class PayEngine : ObjectiveC.NSObject {
   @objc public init(config: PEConfig)
   @objc public static func setThemeMode(_ themMode: PEThemeMode)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createSecureView(additionalFields: [PEField]?, completion: @escaping (ICardNumberView) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func createBankAccountView(additionalFields: [PEField]?, completion: @escaping (IBankAccountView) -> Swift.Void)
+  #endif
   @objc public func getBrowserInfo(view: UIKit.UIView, handler: @escaping (_ data: Swift.String) -> Swift.Void)
   @objc public func perform3DSFlow(view: UIKit.UIView, threeDSData: Swift.String, handler: @escaping (_ data: ThreeDSResult) -> Swift.Void)
   @objc public func createFraudMonitorSession(merchantId: Swift.String, completion: @escaping (Swift.String) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func createFraudMonitorSession(_ merchantId: Swift.String, completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
+  #endif
   public func registerFraudMonitorBackgroundTask()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func createSecureView(additionalFields: [PEField]?, completion: @escaping (Swift.Result<ICardNumberView, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func createBankAccountView(additionalFields: [PEField]?, completion: @escaping (Swift.Result<IBankAccountView, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setupApplePay(merchantId: Swift.String, completion: @escaping (Swift.Result<PEApplePay, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func getCurrentVersionString() -> Swift.String?
+  #endif
   @objc deinit
 }
 extension PayEngine {
-  public static func setFetchAccessTokenCallback(_ callback: @escaping (() throws -> any PEAccessTokenRepresentable))
+  public static func setFetchAccessTokenCallback(_ callback: @escaping () throws -> any PEAccessTokenRepresentable)
   public static func logout(merchantId: Swift.String)
 }
 public enum PEKeyboardType {
@@ -190,7 +239,9 @@ public enum PEKeyboardType {
   case Suica
   case Visa
   case VPay
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: ApplePayPaymentNetwork.RawValue {
     get
@@ -199,8 +250,12 @@ public enum PEKeyboardType {
 @objc public protocol PEApplePayDelegate {
   @objc func paymentError(error: any Swift.Error)
   @objc func paymentSheetDidMDismiss()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func paymentTokenDidReturn(token: Swift.String, metadata: [Swift.String : Any]?, billingContact: PassKit.PKContact?, shippingContact: PassKit.PKContact?, completion: @escaping (PEApplePayResult) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func paymentTokenNotAvailable(error: (any Swift.Error)?)
+  #endif
   @available(iOS 11.0, *)
   @objc optional func didSelectShippingContact(_ contact: PassKit.PKContact, handler completion: @escaping (PassKit.PKPaymentRequestShippingContactUpdate) -> Swift.Void)
   @available(iOS 11.0, *)
@@ -215,9 +270,15 @@ extension UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public func pinEdgesTo(to other: UIKit.UIView)
 }
 @_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class ICardNumberView : UIKit.UIStackView {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func createCard(merchantId: Swift.String?, completion: @escaping (Swift.Result<PECard, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func createCard(merchantId: Swift.String?, additionalData: [Swift.String : Any], completion: @escaping (Swift.Result<PECard, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency public func createCard(merchantId: Swift.String?, additionalData: [Swift.String : Any], completion: @escaping (PECard) -> Swift.Void, failure: @escaping (any Swift.Error) -> Swift.Void)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func validate() -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency public func showKeyboard()
   @_Concurrency.MainActor @preconcurrency public func hideKeyboard()
