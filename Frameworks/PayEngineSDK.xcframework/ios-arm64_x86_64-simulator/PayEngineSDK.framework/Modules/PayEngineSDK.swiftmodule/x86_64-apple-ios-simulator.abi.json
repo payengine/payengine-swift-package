@@ -3819,6 +3819,73 @@
           },
           {
             "kind": "Var",
+            "name": "merchantId",
+            "printedName": "merchantId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardData(py)merchantId",
+            "mangledName": "$s12PayEngineSDK8CardDataC10merchantIdSSSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardData(im)merchantId",
+                "mangledName": "$s12PayEngineSDK8CardDataC10merchantIdSSSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "brand",
             "printedName": "brand",
             "children": [
@@ -4074,6 +4141,140 @@
           },
           {
             "kind": "Var",
+            "name": "email",
+            "printedName": "email",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardData(py)email",
+            "mangledName": "$s12PayEngineSDK8CardDataC5emailSSSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardData(im)email",
+                "mangledName": "$s12PayEngineSDK8CardDataC5emailSSSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "phoneNumber",
+            "printedName": "phoneNumber",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardData(py)phoneNumber",
+            "mangledName": "$s12PayEngineSDK8CardDataC11phoneNumberSSSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardData(im)phoneNumber",
+                "mangledName": "$s12PayEngineSDK8CardDataC11phoneNumberSSSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "addressZip",
             "printedName": "addressZip",
             "children": [
@@ -4134,6 +4335,802 @@
                 "declAttributes": [
                   "Final",
                   "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "surchargeAllowed",
+            "printedName": "surchargeAllowed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12PayEngineSDK8CardDataC16surchargeAllowedSbSgvp",
+            "mangledName": "$s12PayEngineSDK8CardDataC16surchargeAllowedSbSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12PayEngineSDK8CardDataC16surchargeAllowedSbSgvg",
+                "mangledName": "$s12PayEngineSDK8CardDataC16surchargeAllowedSbSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "networkTokenize",
+            "printedName": "networkTokenize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12PayEngineSDK8CardDataC15networkTokenizeSbSgvp",
+            "mangledName": "$s12PayEngineSDK8CardDataC15networkTokenizeSbSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12PayEngineSDK8CardDataC15networkTokenizeSbSgvg",
+                "mangledName": "$s12PayEngineSDK8CardDataC15networkTokenizeSbSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "addressLine1",
+            "printedName": "addressLine1",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardData(py)addressLine1",
+            "mangledName": "$s12PayEngineSDK8CardDataC12addressLine1SSSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardData(im)addressLine1",
+                "mangledName": "$s12PayEngineSDK8CardDataC12addressLine1SSSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "addressLine2",
+            "printedName": "addressLine2",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardData(py)addressLine2",
+            "mangledName": "$s12PayEngineSDK8CardDataC12addressLine2SSSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardData(im)addressLine2",
+                "mangledName": "$s12PayEngineSDK8CardDataC12addressLine2SSSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "addressCountry",
+            "printedName": "addressCountry",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardData(py)addressCountry",
+            "mangledName": "$s12PayEngineSDK8CardDataC14addressCountrySSSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardData(im)addressCountry",
+                "mangledName": "$s12PayEngineSDK8CardDataC14addressCountrySSSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "addressCity",
+            "printedName": "addressCity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardData(py)addressCity",
+            "mangledName": "$s12PayEngineSDK8CardDataC11addressCitySSSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardData(im)addressCity",
+                "mangledName": "$s12PayEngineSDK8CardDataC11addressCitySSSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "addressState",
+            "printedName": "addressState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardData(py)addressState",
+            "mangledName": "$s12PayEngineSDK8CardDataC12addressStateSSSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardData(im)addressState",
+                "mangledName": "$s12PayEngineSDK8CardDataC12addressStateSSSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "storePaymentMethod",
+            "printedName": "storePaymentMethod",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12PayEngineSDK8CardDataC18storePaymentMethodSbSgvp",
+            "mangledName": "$s12PayEngineSDK8CardDataC18storePaymentMethodSbSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12PayEngineSDK8CardDataC18storePaymentMethodSbSgvg",
+                "mangledName": "$s12PayEngineSDK8CardDataC18storePaymentMethodSbSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "expiresAt",
+            "printedName": "expiresAt",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardData(py)expiresAt",
+            "mangledName": "$s12PayEngineSDK8CardDataC9expiresAtSSSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardData(im)expiresAt",
+                "mangledName": "$s12PayEngineSDK8CardDataC9expiresAtSSSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "country",
+            "printedName": "country",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardData(py)country",
+            "mangledName": "$s12PayEngineSDK8CardDataC7countrySSSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardData(im)country",
+                "mangledName": "$s12PayEngineSDK8CardDataC7countrySSSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "type",
+            "printedName": "type",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayEngineSDK@objc(cs)CardData(py)type",
+            "mangledName": "$s12PayEngineSDK8CardDataC4typeSSSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayEngineSDK@objc(cs)CardData(im)type",
+                "mangledName": "$s12PayEngineSDK8CardDataC4typeSSSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "prepaidBenefits",
+            "printedName": "prepaidBenefits",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12PayEngineSDK8CardDataC15prepaidBenefitsSbSgvp",
+            "mangledName": "$s12PayEngineSDK8CardDataC15prepaidBenefitsSbSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Bool?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12PayEngineSDK8CardDataC15prepaidBenefitsSbSgvg",
+                "mangledName": "$s12PayEngineSDK8CardDataC15prepaidBenefitsSbSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
                 ],
                 "accessorKind": "get"
               }
@@ -4320,6 +5317,73 @@
         "name": "PECard",
         "printedName": "PECard",
         "children": [
+          {
+            "kind": "Var",
+            "name": "env",
+            "printedName": "env",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PayEngineSDK@objc(cs)PECard(py)env",
+            "mangledName": "$s12PayEngineSDK6PECardC3envSSSgvp",
+            "moduleName": "PayEngineSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PayEngineSDK@objc(cs)PECard(im)env",
+                "mangledName": "$s12PayEngineSDK6PECardC3envSSSgvg",
+                "moduleName": "PayEngineSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
           {
             "kind": "Var",
             "name": "token",
@@ -8990,6 +10054,13 @@
       "value": "\"transaction_id\""
     },
     {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Components\/PEPaymentView.swift",
+      "kind": "StringLiteral",
+      "offset": 377,
+      "length": 5,
+      "value": "\"vgs\""
+    },
+    {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/BankAccountResponseModel.swift",
       "kind": "StringLiteral",
       "offset": 754,
@@ -9146,77 +10217,189 @@
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 1995,
+      "offset": 3379,
       "length": 4,
       "value": "\"id\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 2026,
+      "offset": 3418,
+      "length": 13,
+      "value": "\"merchant_id\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 3466,
       "length": 7,
       "value": "\"brand\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 2060,
+      "offset": 3508,
       "length": 8,
       "value": "\"last_4\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 2095,
+      "offset": 3551,
       "length": 11,
       "value": "\"exp_month\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 2133,
+      "offset": 3597,
       "length": 10,
       "value": "\"exp_year\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 2170,
+      "offset": 3642,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 2203,
+      "offset": 3683,
+      "length": 7,
+      "value": "\"email\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 3725,
+      "length": 14,
+      "value": "\"phone_number\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 3774,
       "length": 13,
       "value": "\"address_zip\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 3250,
+      "offset": 3822,
+      "length": 19,
+      "value": "\"surcharge_allowed\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 3876,
+      "length": 18,
+      "value": "\"network_tokenize\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 3929,
+      "length": 15,
+      "value": "\"address_line1\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 3979,
+      "length": 15,
+      "value": "\"address_line2\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4029,
+      "length": 17,
+      "value": "\"address_country\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4081,
+      "length": 14,
+      "value": "\"address_city\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4130,
+      "length": 15,
+      "value": "\"address_state\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4180,
+      "length": 22,
+      "value": "\"store_payment_method\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4237,
+      "length": 12,
+      "value": "\"expires_at\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4284,
+      "length": 9,
+      "value": "\"country\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4328,
+      "length": 6,
+      "value": "\"type\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 4369,
+      "length": 18,
+      "value": "\"prepaid_benefits\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 7355,
       "length": 7,
       "value": "\"error\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 3281,
+      "offset": 7386,
       "length": 9,
       "value": "\"message\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 3919,
+      "offset": 8160,
+      "length": 5,
+      "value": "\"env\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 8190,
       "length": 7,
       "value": "\"token\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/CardResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 3951,
+      "offset": 8222,
       "length": 11,
       "value": "\"card_data\""
     },
@@ -9254,6 +10437,13 @@
       "offset": 323,
       "length": 10,
       "value": "\"vauiltId\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Components\/PEBankAccountView.swift",
+      "kind": "StringLiteral",
+      "offset": 393,
+      "length": 5,
+      "value": "\"vgs\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Features\/ApplePay\/ApplePayStatus.swift",
@@ -9377,21 +10567,28 @@
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/SecureFieldResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 731,
+      "offset": 745,
+      "length": 9,
+      "value": "\"adapter\""
+    },
+    {
+      "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/SecureFieldResponseModel.swift",
+      "kind": "StringLiteral",
+      "offset": 784,
       "length": 7,
       "value": "\"vault\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/SecureFieldResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 771,
+      "offset": 821,
       "length": 13,
       "value": "\"environment\""
     },
     {
       "filePath": "\/Volumes\/M2-500\/Workspaces\/PayEngine\/pf-payment-sdk-ios\/SDK\/PayEngineSDK\/src\/Models\/SecureFieldResponseModel.swift",
       "kind": "StringLiteral",
-      "offset": 811,
+      "offset": 861,
       "length": 7,
       "value": "\"cname\""
     },
