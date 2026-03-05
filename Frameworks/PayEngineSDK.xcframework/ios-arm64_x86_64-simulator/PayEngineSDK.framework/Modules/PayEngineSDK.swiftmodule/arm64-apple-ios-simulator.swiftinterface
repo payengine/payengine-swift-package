@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
-// swift-module-flags: -target arm64-apple-ios12.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PayEngineSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios12.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PayEngineSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import Foundation
 import PassKit
 @_exported import PayEngineSDK
@@ -93,17 +93,33 @@ extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class CardData : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let id: Swift.String
+  @objc final public let merchantId: Swift.String?
   @objc final public let brand: Swift.String
   @objc final public let last4: Swift.String
   @objc final public let expMonth: Swift.Int
   @objc final public let expYear: Swift.Int
   @objc final public let name: Swift.String
+  @objc final public let email: Swift.String?
+  @objc final public let phoneNumber: Swift.String?
   @objc final public let addressZip: Swift.String?
+  final public let surchargeAllowed: Swift.Bool?
+  final public let networkTokenize: Swift.Bool?
+  @objc final public let addressLine1: Swift.String?
+  @objc final public let addressLine2: Swift.String?
+  @objc final public let addressCountry: Swift.String?
+  @objc final public let addressCity: Swift.String?
+  @objc final public let addressState: Swift.String?
+  final public let storePaymentMethod: Swift.Bool?
+  @objc final public let expiresAt: Swift.String?
+  @objc final public let country: Swift.String?
+  @objc final public let type: Swift.String?
+  final public let prepaidBenefits: Swift.Bool?
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class PECard : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let env: Swift.String?
   @objc final public let token: Swift.String
   @objc final public let cardData: CardData
   @objc deinit
@@ -152,7 +168,7 @@ extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
   @objc deinit
 }
 extension PayEngine {
-  public static func setFetchAccessTokenCallback(_ callback: @escaping (() throws -> any PEAccessTokenRepresentable))
+  public static func setFetchAccessTokenCallback(_ callback: @escaping () throws -> any PEAccessTokenRepresentable)
   public static func logout(merchantId: Swift.String)
 }
 public enum PEKeyboardType {
