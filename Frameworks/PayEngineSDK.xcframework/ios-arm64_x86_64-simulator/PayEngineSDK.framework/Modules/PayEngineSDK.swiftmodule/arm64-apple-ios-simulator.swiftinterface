@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
-// swift-module-flags: -target arm64-apple-ios12.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PayEngineSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios12.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PayEngineSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import Foundation
 import PassKit
 @_exported import PayEngineSDK
@@ -93,17 +93,33 @@ extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class CardData : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let id: Swift.String
+  @objc final public let merchantId: Swift.String?
   @objc final public let brand: Swift.String
   @objc final public let last4: Swift.String
   @objc final public let expMonth: Swift.Int
   @objc final public let expYear: Swift.Int
   @objc final public let name: Swift.String
+  @objc final public let email: Swift.String?
+  @objc final public let phoneNumber: Swift.String?
   @objc final public let addressZip: Swift.String?
+  final public let surchargeAllowed: Swift.Bool?
+  final public let networkTokenize: Swift.Bool?
+  @objc final public let addressLine1: Swift.String?
+  @objc final public let addressLine2: Swift.String?
+  @objc final public let addressCountry: Swift.String?
+  @objc final public let addressCity: Swift.String?
+  @objc final public let addressState: Swift.String?
+  final public let storePaymentMethod: Swift.Bool?
+  @objc final public let expiresAt: Swift.String?
+  @objc final public let country: Swift.String?
+  @objc final public let type: Swift.String?
+  final public let prepaidBenefits: Swift.Bool?
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers public class PECard : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let env: Swift.String?
   @objc final public let token: Swift.String
   @objc final public let cardData: CardData
   @objc deinit
@@ -138,11 +154,11 @@ extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
 @objc public class PayEngine : ObjectiveC.NSObject {
   @objc public init(config: PEConfig)
   @objc public static func setThemeMode(_ themMode: PEThemeMode)
-  @objc public func createSecureView(additionalFields: [PEField]?, completion: @escaping (ICardNumberView) -> Swift.Void)
-  @objc public func createBankAccountView(additionalFields: [PEField]?, completion: @escaping (IBankAccountView) -> Swift.Void)
+  @objc public func createSecureView(additionalFields: [PEField]?, completion: @escaping (ICardNumberView) -> Swift.Void, failure: @escaping (any Swift.Error) -> Swift.Void)
+  @objc public func createBankAccountView(additionalFields: [PEField]?, completion: @escaping (IBankAccountView) -> Swift.Void, failure: @escaping (any Swift.Error) -> Swift.Void)
   @objc public func getBrowserInfo(view: UIKit.UIView, handler: @escaping (_ data: Swift.String) -> Swift.Void)
   @objc public func perform3DSFlow(view: UIKit.UIView, threeDSData: Swift.String, handler: @escaping (_ data: ThreeDSResult) -> Swift.Void)
-  @objc public func createFraudMonitorSession(merchantId: Swift.String, completion: @escaping (Swift.String) -> Swift.Void)
+  @objc public func createFraudMonitorSession(merchantId: Swift.String, completion: @escaping (Swift.String) -> Swift.Void, failure: @escaping (any Swift.Error) -> Swift.Void)
   public func createFraudMonitorSession(_ merchantId: Swift.String, completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
   public func registerFraudMonitorBackgroundTask()
   public func createSecureView(additionalFields: [PEField]?, completion: @escaping (Swift.Result<ICardNumberView, any Swift.Error>) -> Swift.Void)
@@ -152,8 +168,49 @@ extension PEApplePay : PassKit.PKPaymentAuthorizationViewControllerDelegate {
   @objc deinit
 }
 extension PayEngine {
-  public static func setFetchAccessTokenCallback(_ callback: @escaping (() throws -> any PEAccessTokenRepresentable))
+  public static func setFetchAccessTokenCallback(_ callback: @escaping () throws -> any PEAccessTokenRepresentable)
   public static func logout(merchantId: Swift.String)
+}
+public enum MissingAccessTokenReason : Swift.String {
+  case noCallback
+  case callbackFailed
+  case emptyToken
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PayEngineError {
+  case invalidURL
+  case missingData(response: Swift.String)
+  case invalidPublicKey
+  case httpError(data: Foundation.Data?)
+  case httpStatus(statusCode: Swift.Int, message: Swift.String?, underlying: (any Swift.Error)?)
+  case unknown(data: Swift.String)
+  case common(data: Swift.String)
+  case cardCreationError(message: Swift.String)
+  case bankAccountCreationError(message: Swift.String)
+  case missingAccessToken(reason: MissingAccessTokenReason, underlying: (any Swift.Error)?)
+  public var code: Swift.String {
+    get
+  }
+}
+extension PayEngineError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension PayEngineError : Foundation.CustomNSError {
+  public static var errorDomain: Swift.String {
+    get
+  }
+  public var errorCode: Swift.Int {
+    get
+  }
+  public var errorUserInfo: [Swift.String : Any] {
+    get
+  }
 }
 public enum PEKeyboardType {
   case number
@@ -235,6 +292,9 @@ extension ApplePayStatus : Swift.RawRepresentable {}
 extension PEApplePayResult : Swift.Equatable {}
 extension PEApplePayResult : Swift.Hashable {}
 extension PEApplePayResult : Swift.RawRepresentable {}
+extension MissingAccessTokenReason : Swift.Equatable {}
+extension MissingAccessTokenReason : Swift.Hashable {}
+extension MissingAccessTokenReason : Swift.RawRepresentable {}
 extension PEKeyboardType : Swift.Equatable {}
 extension PEKeyboardType : Swift.Hashable {}
 extension ApplePayPaymentNetwork : Swift.Equatable {}
